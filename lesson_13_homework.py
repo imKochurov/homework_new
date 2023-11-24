@@ -42,14 +42,14 @@ def random_list_maker_writer(count_list):
 
     return(print(f"Було записано {count_list} файлів з випадковим набором букв.\n"))
 
-# random_list_maker_writer(3)
+random_list_maker_writer(2) # записуємо два файли
 
 # Зовнішня функція приймає параметр, скільки json-файлів з рандомними списками треба записати
 # Внутрішня функція запису викликається всередині зовнішньої функції
 
 # TASK 3
 
-def square_nums(nums):
+def square_nums(nums):                          # рядки 52-59 умова завдання
     return [num ** 2 for num in nums]
 
 def remove_negatives(nums):
@@ -58,11 +58,11 @@ def remove_negatives(nums):
 nums1 = [1, 2, 3, 4, 5]
 nums2 = [1, -2, 3, -4, 5]
 
-def choose_func(nums_list):
+def choose_func(nums_list):                     # реалізація завдання
     has_negative = any(num < 0 for num in nums_list)
-    if has_negative == True: #якщо є від'ємні числа
+    if has_negative == True:                    #якщо є від'ємні числа
         return(remove_negatives(nums_list))
-    else:
+    else:                                       # якщо всі додатні і нуль
         return(square_nums(nums_list))
 
-print(choose_func(nums2))
+print(choose_func(nums1))
