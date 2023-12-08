@@ -1,0 +1,4 @@
+2023-12-08 22:52:02.642646 Error: ZeroDivisionError, division by zero
+2023-12-08 22:52:14.065162 Error: TypeError, unsupported operand type(s) for /: 'int' and 'str'
+2023-12-08 22:52:56.718185 Error: TypeError, 'int' object is not iterable
+2023-12-08 22:53:28.305040 Error: ZeroDivisionError, division by zero
