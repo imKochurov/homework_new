@@ -106,10 +106,7 @@ class Fraction:
                     a, b = b, a % b
                 num = result[0]//a
                 denom = result[1]//a
-                if num >= denom:
-                    return f"Результат методу {func.__name__}: {num//denom}"
-                else:
-                    return f"Результат методу {func.__name__}: {num}/{denom}"
+                return f"Результат методу {func.__name__}: {num}/{denom}"
             except Exception as e:
                 return f"В методі {func.__name__} виникла помилка: {type(e).__name__}: {str(e)}"
         return wrap
@@ -143,4 +140,4 @@ class Fraction:
 
 a = Fraction(5, 8)
 
-print("\n", a.__add__(1, 4), a.__sub__(1, 5), a.__mul__(1, 3), a.__truediv__(3, 16), sep="\n")
+print("\n", a.__add__(6, 8), a.__sub__(1, 5), a.__mul__(1, 3), a.__truediv__(3, 16), sep="\n")
