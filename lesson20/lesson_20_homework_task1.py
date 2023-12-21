@@ -2,6 +2,8 @@ from lesson19.lesson_19_homework import My_enumerate_custom as enumerate_cust, M
 import random
 import unittest
 
+# TASK 1
+
 class Test(unittest.TestCase):
     def test_enumerate_func(self):
         iterable1 = [i for i in range(random.randint(2, 30))]
