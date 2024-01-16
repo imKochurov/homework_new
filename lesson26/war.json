@@ -1,0 +1,13 @@
+{
+  "message": "The data were fetched successfully.",
+  "data": {
+    "date_start": "2022-02-24",
+    "date_end": null,
+    "current_day": 692,
+    "current_date": "2024-01-16",
+    "war_status": {
+      "code": 1,
+      "alias": "in_progress"
+    }
+  }
+}
