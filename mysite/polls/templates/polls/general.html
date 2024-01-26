@@ -1,0 +1,50 @@
+<!--{% load static %}-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/general.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'polls/images/favicon.png' %}" >
+</head>
+<body>
+
+    <header>
+        <h1>{{ welcome_message }}</h1>
+    </header>
+
+    <section>
+        <h2>{{ section_title }}</h2>
+        <p>На календарі: <b>{{ date }}</b></br></br>
+        Київський час: <b>{{ time }}</b></p>
+        
+        <a href="{% url 'new_page_1' %}">Нова сторінка 1</a>
+    </br>
+    </br>
+        <button class="GFG" 
+        onclick="window.location.href = 'http://127.0.0.1:8000/newpage1/';"> 
+            Homework
+        </button>
+    </br>
+    </br>
+        <button class="GFG" 
+        onclick="window.location.href = 'http://127.0.0.1:8000/newpage2/';"> 
+            Bootstrap test
+        </button>
+    </br>
+    </br>
+        <button class="GFG" 
+        onclick="window.location.href = 'http://127.0.0.1:8000/newpage3/';"> 
+            Нова сторінка 3
+        </button>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Мій тестовий сайт. Усі права захищені.</p>
+    </footer>
+
+</body>
+</html>
