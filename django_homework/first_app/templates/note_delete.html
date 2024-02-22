@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Note Delete
+{% endblock %}
+
+{% block content %}
+    <h1 class="display-4">Видалення нотатки</h1>
+    <p>Ви впевнені, що хочете видалити нотатку "{{ note.title }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Видалити</button>
+    </form>
+{% endblock %}

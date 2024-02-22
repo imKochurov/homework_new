@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Tracker
+{% endblock %}
+
+{% block content %}
+<h1 class="display-4">Відстеження посилки</h1>
+<p class="lead">Введіть трек-номер відправлення для детальної інформації про доставку</p>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Відстежити посилку
+                    </div>
+                    <div class="card-body">
+                        <!-- Форма замовлення дзвінка -->
+                        <form action="{% url 'tracker' %}" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="tracker">Трек-номер</label>
+                                <input type="text" class="form-control" id="id_parcel_id" name="parcel_id" required>
+                            </div><br>
+                            <button type="submit" class="btn btn-primary">Знайти</button>
+                        </form>
+                        <!-- Кінець форми -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if parcel_data %}
+        <h2>Дані про посилку:</h2>
+        <p>Трек-номер: {{ parcel_data.parcel_id }}</p>
+        <p>Дата і час відправлення: {{ parcel_data.shipment_date }}</p>
+        <p>Дата доставки: {{ parcel_data.delivery_date }}</p>
+        <p>Служба доставки: {{ parcel_data.postal_name }}</p>
+    {% endif %}
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+{% endblock %}
